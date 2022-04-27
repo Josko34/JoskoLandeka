@@ -44,6 +44,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "test": [
+            "@php artisan key:generate --ansi"
+        ],
+        "produciraj":[
+            "@test",
+            "git add .",
+            "git commit -m\"nova verzija\"",
+            "git push"
         ]
     },
     "extra": {
