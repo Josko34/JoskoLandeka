@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$sifra = parse_url('mysql://be0d7ac453fbc1:4df680fc@us-cdbr-east-05.cleardb.net/heroku_3566fcb296c33c1?reconnect=true')
+$sifra = parse_url('mysql://be0d7ac453fbc1:4df680fc@us-cdbr-east-05.cleardb.net/heroku_3566fcb296c33c1?reconnect=true');
 
 return [
 
