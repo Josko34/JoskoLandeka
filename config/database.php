@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$sifra = parse_url('mysql://be0d7ac453fbc1:4df680fc@us-cdbr-east-05.cleardb.net/heroku_3566fcb296c33c1?reconnect=true')
+
 return [
 
     /*
@@ -46,14 +48,14 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $sifra['host'],
+            'port' => '3306',
+            'database' => ltrim($sifra['path'], "/"),
+            'username' => $sifra['user'],
+            'password' => $sifra['pass'],
             'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
